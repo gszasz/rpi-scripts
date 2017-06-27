@@ -28,5 +28,5 @@ cpu_temp=$(</sys/class/thermal/thermal_zone0/temp)
 # Print report
 echo "$(date) @ $(hostname)"
 echo "-------------------------------------------"
-echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
+echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp | cut -d '=' -f 2)"
 echo "CPU => $((cpu_temp/1000))'C"
