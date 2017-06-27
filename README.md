@@ -27,5 +27,5 @@ This repository contains my collection of useful scripts for Raspberry Pi.
 A simple shell script derived from the my-pi-temp.sh by Vivek Gite [1,2] that
 just displays both GPU and CPU temperature of Raspberry Pi 2.
 
-[1] http://www.cyberciti.biz
-[2] https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
+* [1] http://www.cyberciti.biz
+* [2] https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
