@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# pi-temp -- Display the ARM CPU and GPU temperature of Raspberry Pi 2
+#
+# Copyright (C) 2017 Gabriel Szasz <gabriel.szasz1@gmail.com>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# The script is based on 'my-pi-temp.sh' by Vivek Gite published at
+#   <https://www.cyberciti.biz/faq/
+#    linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/>
+#
+
+# Get CPU temperature
+cpu_temp=$(</sys/class/thermal/thermal_zone0/temp)
+
+# Print report
+echo "$(date) @ $(hostname)"
+echo "-------------------------------------------"
+echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
+echo "CPU => $((cpu_temp/1000))'C"
