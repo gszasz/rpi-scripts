@@ -13,7 +13,7 @@ This repository contains my collection of useful scripts for Raspberry Pi.
 2. Run installation script:
 
         cd rpi-scripts
-        sudo install.sh
+        sudo ./install.sh
 
 
 ## Scripts
