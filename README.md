@@ -5,27 +5,24 @@ This repository contains my collection of useful scripts for Raspberry Pi.
 
 ## Installation on Raspbian Jessie
 
-1. Clone repository into your home directory.
+1. Clone repository:
 
         git clone git@github.com:gszasz/rpi-scripts.git
 
 
-2. Create `~/bin` directory
+2. Run installation script:
 
-        mkdir ~/bin
-
-
-3. Create following link(s) for individual scripts:
-
-        ln -sf ~/rpi-scripts/rpi-temp ~/bin/rpi-temp
+        cd rpi-scripts
+        sudo install.sh
 
 
 ## Scripts
 
-### rpi-temp.sh
+### rpi-temp
 
-A simple shell script derived from the my-pi-temp.sh by Vivek Gite [1,2] that
-just displays both GPU and CPU temperature of Raspberry Pi 2.
+A simple shell script that just displays temperature of GPU and CPU.  It was
+tested on Raspberry Pi 3, but it should work on Raspberry Pi 2 as well.
 
-* [1] http://www.cyberciti.biz
-* [2] https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
+The `rpi-temp` script is derived from
+ [my-pi-temp.sh](https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
+ written by [Vivek Gite](http://www.cyberciti.biz).
